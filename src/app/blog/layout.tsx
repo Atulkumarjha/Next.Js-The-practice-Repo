@@ -8,6 +8,6 @@ export default function BlogLayout({
             {children} 
         </section>
     )
-}
+} 
 
 
