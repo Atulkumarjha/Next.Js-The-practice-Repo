@@ -1,14 +1,15 @@
-import Link from 'next/link';
+import ThemeProvider from './theme-provider'
 
-export default function Layout({ children }: { children: React.ReactNode }) {
-return (
-  <html>
-  <body>
-  <nav>
-  <Link href="/blog">Blog</Link>
-  <a href="/contact">Contact</a>
-  </nav>
-  {children}
-  </body>
-  </html>
-)}
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
+    </html>
+  )
+}
